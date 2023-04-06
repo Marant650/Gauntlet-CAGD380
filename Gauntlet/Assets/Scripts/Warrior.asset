@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f8ced613f7cb0a49acb1d739bb3547e, type: 3}
   m_Name: Warrior
   m_EditorClassIdentifier: 
-  className: 
+  className: Warrior
   health: 0
   score: 0
   numberOfKeys: 0
