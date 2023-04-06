@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f8ced613f7cb0a49acb1d739bb3547e, type: 3}
+  m_Name: Warrior
+  m_EditorClassIdentifier: 
+  className: Warrior
+  health: 0
+  score: 0
+  numberOfKeys: 0
+  numberOfPotions: 0
+  characterPrefab: {fileID: 0}
+  shotPrefab: {fileID: 0}
+  runSpeed: 5
+  armorStrength: 0
+  shotStrength: 0
+  shotTravelSpeed: 0
+  meleeStrength: 0
+  magicVsMonsters: 0
+  magicVsGenerators: 0
+  potionShotVsMonsters: 0
+  potionShotVsGenerators: 0
