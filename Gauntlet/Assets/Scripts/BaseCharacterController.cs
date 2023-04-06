@@ -19,13 +19,12 @@ public class BaseCharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(moveInput.x * runSpeed * Time.deltaTime, 0, moveInput.y * runSpeed * Time.deltaTime);
+        transform.Translate(new Vector3(moveInput.x , 0, moveInput.y) * runSpeed * Time.deltaTime);
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
-        
+        moveInput = context.ReadValue<Vector2>();        
         Debug.Log(moveInput);
     }
 }
