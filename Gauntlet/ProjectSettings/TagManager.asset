@@ -3,15 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Food
+  - Key
+  - Treasure
+  - Potion
+  - Door
+  - Bone Pile
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Item
   - Water
   - UI
-  - 
+  - Generator
   - 
   - 
   - 
