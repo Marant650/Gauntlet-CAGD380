@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f8ced613f7cb0a49acb1d739bb3547e, type: 3}
+  m_Name: Wizard
+  m_EditorClassIdentifier: 
+  className: Wizard
+  health: 2000
+  score: 0
+  numberOfKeys: 0
+  numberOfPotions: 0
+  characterPrefab: {fileID: 551855127548777615, guid: 53812aab523a12b4ba111ec98c3c4ffc, type: 3}
+  shotPrefab: {fileID: 4519148016298984570, guid: 8585623b4e89e7340b10e6632e97d342, type: 3}
+  runSpeed: 1
+  armorStrength: 1
+  shotStrength: 1.5
+  shotTravelSpeed: 3.5
+  meleeStrength: 1
+  magicVsMonsters: 3
+  magicVsGenerators: 3
+  potionShotVsMonsters: 3
+  potionShotVsGenerators: 2
