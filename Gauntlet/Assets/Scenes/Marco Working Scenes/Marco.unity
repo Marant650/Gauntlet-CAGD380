@@ -218,70 +218,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1313756252 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 430364266241848863, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
-  m_PrefabInstance: {fileID: 1460171915}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1313756253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313756252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e00d7e4af4c434b8485080647c4153, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  warrior: {fileID: 11400000, guid: 4cb90a6a8444de747911ab810f280ee6, type: 2}
---- !u!114 &1313756254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313756252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 62e468c17ea832349a7d29ad60d4fc0e, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1313756253}
-        m_TargetAssemblyTypeName: BaseCharacterController, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 5cb49ce2-8488-4135-a91c-dfec98ef096a
-    m_ActionName: Character/New action
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Character
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1001 &1460171915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -299,7 +235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 430364266241848859, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.72
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 430364266241848859, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
       propertyPath: m_LocalPosition.z
