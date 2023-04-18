@@ -10,20 +10,19 @@ public class BaseCharacterController : MonoBehaviour
     public PlayerData warrior;
     private float runSpeed;
     private Rigidbody rb;
-    
+    public Transform shotPosition;
     
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        runSpeed = warrior.runSpeed;
+       
     }
 
     private void FixedUpdate()
     {
-
-        rb.velocity = new Vector3(moveInput.x, 0, moveInput.y) * runSpeed;
+        rb.velocity = new Vector3(moveInput.x, 0, moveInput.y) * warrior.runSpeed;
     }
 
     // Update is called once per frame
@@ -33,6 +32,7 @@ public class BaseCharacterController : MonoBehaviour
         {
             transform.forward = new Vector3(moveInput.x,0,moveInput.y);
         }
+
        // transform.Translate(new Vector3(moveInput.x , 0, moveInput.y) * runSpeed * Time.deltaTime);
 
     }
@@ -45,6 +45,6 @@ public class BaseCharacterController : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext context)
     {
-
+        Instantiate(warrior.shotPrefab, shotPosition.position, shotPosition.rotation);
     }
 }

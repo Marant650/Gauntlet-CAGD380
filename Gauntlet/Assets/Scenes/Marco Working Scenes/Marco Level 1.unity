@@ -561,6 +561,22 @@ Transform:
   m_Father: {fileID: 1719594017}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &469863551 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1313756253, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
+  m_PrefabInstance: {fileID: 659718016}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e00d7e4af4c434b8485080647c4153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &469863556 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 430364266241848859, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
+  m_PrefabInstance: {fileID: 659718016}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &500622468
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,9 +679,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1313756255, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
+    - target: {fileID: 1313756253, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
+      propertyPath: shotPosition
+      value: 
+      objectReference: {fileID: 911800348}
+    - target: {fileID: 1313756254, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313756254, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 469863551}
+    - target: {fileID: 1313756254, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313756254, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BaseCharacterController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313756254, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 430364266241848859, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
       propertyPath: m_RootOrder
@@ -717,6 +753,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
+--- !u!1 &911800347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 911800348}
+  m_Layer: 0
+  m_Name: ProjectileSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &911800348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911800347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 469863556}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1210090685
 GameObject:
   m_ObjectHideFlags: 0

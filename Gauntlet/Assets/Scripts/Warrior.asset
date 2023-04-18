@@ -18,8 +18,8 @@ MonoBehaviour:
   numberOfKeys: 0
   numberOfPotions: 0
   characterPrefab: {fileID: 0}
-  shotPrefab: {fileID: 0}
-  runSpeed: 500
+  shotPrefab: {fileID: 1860832832380424331, guid: 7e905ba264803834fb67d69b7f9118ec, type: 3}
+  runSpeed: 5
   armorStrength: 0
   shotStrength: 0
   shotTravelSpeed: 0
