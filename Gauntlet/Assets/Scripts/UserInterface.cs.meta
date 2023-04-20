@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c92eac7d64f36d84882c9f48030bc7e4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - warrior: {fileID: 11400000, guid: 4cb90a6a8444de747911ab810f280ee6, type: 2}
+  - valkyrie: {fileID: 11400000, guid: 56df45a5a91fed24a8cee41a077f2bcd, type: 2}
+  - wizard: {fileID: 11400000, guid: d1212678e9454a24389fcab472778136, type: 2}
+  - elf: {fileID: 11400000, guid: 632e345ff7e4c5f4d8f71dbbc1c0dfc7, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
