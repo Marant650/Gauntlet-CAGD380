@@ -11,6 +11,8 @@ public class BaseCharacterController : MonoBehaviour
     private float runSpeed;
     private Rigidbody rb;
     public Transform shotPosition;
+    private bool shoot = true;
+    public float fireRate;
     
 
     // Start is called before the first frame update
@@ -45,6 +47,18 @@ public class BaseCharacterController : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext context)
     {
-        Instantiate(warrior.shotPrefab, shotPosition.position, shotPosition.rotation);
+        if (shoot)
+        {
+            Instantiate(warrior.shotPrefab, shotPosition.position, shotPosition.rotation);
+            shoot = false;
+            StartCoroutine(ShotCoolDown());
+        }
+        
+    }
+
+    IEnumerator ShotCoolDown()
+    {
+        yield return new WaitForSeconds(fireRate);
+        shoot = true;
     }
 }
