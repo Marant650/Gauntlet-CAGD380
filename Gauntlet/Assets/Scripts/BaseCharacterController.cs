@@ -7,7 +7,7 @@ public class BaseCharacterController : MonoBehaviour
 {
     Vector2 moveInput;
     Vector3 moveDirection;
-    public PlayerData warrior;
+    public PlayerData character;
     private float runSpeed;
     private Rigidbody rb;
     public Transform shotPosition;
@@ -24,7 +24,7 @@ public class BaseCharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector3(moveInput.x, 0, moveInput.y) * warrior.runSpeed;
+        rb.velocity = new Vector3(moveInput.x, 0, moveInput.y) * character.runSpeed;
     }
 
     // Update is called once per frame
@@ -49,7 +49,7 @@ public class BaseCharacterController : MonoBehaviour
     {
         if (shoot)
         {
-            Instantiate(warrior.shotPrefab, shotPosition.position, shotPosition.rotation);
+            Instantiate(character.shotPrefab, shotPosition.position, shotPosition.rotation);
             shoot = false;
             StartCoroutine(ShotCoolDown());
         }
