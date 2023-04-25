@@ -1852,7 +1852,6 @@ GameObject:
   - component: {fileID: 766014958}
   - component: {fileID: 766014957}
   - component: {fileID: 766014956}
-  - component: {fileID: 766014960}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1946,26 +1945,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &766014960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766014955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c92eac7d64f36d84882c9f48030bc7e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  warrior: {fileID: 11400000, guid: 4cb90a6a8444de747911ab810f280ee6, type: 2}
-  wizard: {fileID: 11400000, guid: d1212678e9454a24389fcab472778136, type: 2}
-  elf: {fileID: 11400000, guid: 632e345ff7e4c5f4d8f71dbbc1c0dfc7, type: 2}
-  valkyrie: {fileID: 11400000, guid: 56df45a5a91fed24a8cee41a077f2bcd, type: 2}
-  warriorAnimation: {fileID: 73857023}
-  wizardAnimation: {fileID: 296434381}
-  elfAnimation: {fileID: 850843670}
-  valkyrieAnimation: {fileID: 336100144}
 --- !u!1 &850843666
 GameObject:
   m_ObjectHideFlags: 0
@@ -4390,6 +4369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1998911388}
+  - component: {fileID: 1998911389}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -4411,6 +4391,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1998911389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998911387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81ee1e5dbdaa5047b0582fc64239ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warrior: {fileID: 11400000, guid: 4cb90a6a8444de747911ab810f280ee6, type: 2}
+  wizard: {fileID: 11400000, guid: d1212678e9454a24389fcab472778136, type: 2}
+  elf: {fileID: 11400000, guid: 632e345ff7e4c5f4d8f71dbbc1c0dfc7, type: 2}
+  valkyrie: {fileID: 11400000, guid: 56df45a5a91fed24a8cee41a077f2bcd, type: 2}
+  warriorAnimation: {fileID: 73857023}
+  wizardAnimation: {fileID: 296434381}
+  elfAnimation: {fileID: 850843670}
+  valkyrieAnimation: {fileID: 336100144}
+  selectedClass: none
 --- !u!1 &2032137170
 GameObject:
   m_ObjectHideFlags: 0
