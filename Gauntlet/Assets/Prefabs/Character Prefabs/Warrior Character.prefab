@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1313756254}
   m_Layer: 0
   m_Name: Warrior Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e00d7e4af4c434b8485080647c4153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warrior: {fileID: 11400000, guid: 4cb90a6a8444de747911ab810f280ee6, type: 2}
+  character: {fileID: 11400000, guid: 4cb90a6a8444de747911ab810f280ee6, type: 2}
   shotPosition: {fileID: 911800348}
   fireRate: 0.3
 --- !u!114 &1313756254
