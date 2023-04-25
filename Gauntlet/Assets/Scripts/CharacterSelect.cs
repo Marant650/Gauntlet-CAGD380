@@ -1,23 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class UserInterface : MonoBehaviour
+public class CharacterSelect : MonoBehaviour
 {
-    public PlayerData warrior;
-    public PlayerData wizard;
-    public PlayerData elf;
-    public PlayerData valkyrie;
-
     public Animator warriorAnimation;
     public Animator wizardAnimation;
     public Animator elfAnimation;
     public Animator valkyrieAnimation;
 
+    public GameObject warriorPrefab;
+    public GameObject wizardPrefab;
+    public GameObject elfPrefab;
+    public GameObject valkyriePrefab;
+
+    private string _selectedClass = "none";
 
     private void Start()
     {
+        DontDestroyOnLoad(gameObject);
         warriorAnimation.enabled = false;
         wizardAnimation.enabled = false;
         elfAnimation.enabled = false;
@@ -26,33 +28,65 @@ public class UserInterface : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             warriorAnimation.enabled = true;
             wizardAnimation.enabled = false;
             elfAnimation.enabled = false;
             valkyrieAnimation.enabled = false;
+            _selectedClass = "warrior";
         }
+
         if (Input.GetKey(KeyCode.RightArrow))
         {
             warriorAnimation.enabled = false;
             wizardAnimation.enabled = true;
             elfAnimation.enabled = false;
             valkyrieAnimation.enabled = false;
+            _selectedClass = "wizard";
         }
+
         if (Input.GetKey(KeyCode.DownArrow))
         {
             warriorAnimation.enabled = false;
             wizardAnimation.enabled = false;
             elfAnimation.enabled = true;
             valkyrieAnimation.enabled = false;
+            _selectedClass = "elf";
         }
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             warriorAnimation.enabled = false;
             wizardAnimation.enabled = false;
             elfAnimation.enabled = false;
             valkyrieAnimation.enabled = true;
+            _selectedClass = "valkyrie";
+        }
+
+        if(Input.GetKey(KeyCode.Space))
+        {
+            SceneManager.LoadScene(1);
+            if(_selectedClass == "warrior")
+            {
+
+            }
+
+            if(_selectedClass == "wizard")
+            {
+
+            }
+
+            if(_selectedClass == "elf")
+            {
+
+            }
+
+            if(_selectedClass == "valkyrie")
+            {
+
+            }
+            Destroy(this);
         }
     }
 }
