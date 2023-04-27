@@ -70,8 +70,23 @@ public class CharacterSelect : MonoBehaviour
             if (_selectedClass == "warrior")
             {
                 Instantiate(warriorPrefab, Vector3.zero, Quaternion.identity);
-                Debug.Log("warrior Spawned");
             }
+            
+            if (_selectedClass == "wizard")
+            {
+                Instantiate(wizardPrefab, Vector3.zero, Quaternion.identity);
+            }
+            
+            if (_selectedClass == "elf")
+            {
+                Instantiate(elfPrefab, Vector3.zero, Quaternion.identity);
+            }
+            
+            if (_selectedClass == "valkyrie")
+            {
+                Instantiate(valkyriePrefab, Vector3.zero, Quaternion.identity);
+            }
+            Destroy(this);
         }
     }
 }
