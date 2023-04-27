@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Elf
   m_EditorClassIdentifier: 
   className: Elf
-  health: 2000
+  health: 1991
   score: 0
   numberOfKeys: 0
   numberOfPotions: 0
   characterPrefab: {fileID: 1513959042734247239, guid: 70d1bb1b2beba044d9aac6ee4fc305d7, type: 3}
   shotPrefab: {fileID: 103587804407569414, guid: 1d30cf7fb430c9c4caa8b69b45951283, type: 3}
-  runSpeed: 3
+  runSpeed: 7
   armorStrength: 0.9
   shotStrength: 1
-  shotTravelSpeed: 3.5
+  shotTravelSpeed: 9
   meleeStrength: 1.5
   magicVsMonsters: 3
   magicVsGenerators: 2
