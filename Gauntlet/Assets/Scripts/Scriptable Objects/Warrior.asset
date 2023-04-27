@@ -22,7 +22,7 @@ MonoBehaviour:
   runSpeed: 5
   armorStrength: 0.8
   shotStrength: 2
-  shotTravelSpeed: 2
+  shotTravelSpeed: 5
   meleeStrength: 2.5
   magicVsMonsters: 2
   magicVsGenerators: 0
