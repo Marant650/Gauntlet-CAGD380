@@ -64,29 +64,14 @@ public class CharacterSelect : MonoBehaviour
             _selectedClass = "valkyrie";
         }
 
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene(1);
-            if(_selectedClass == "warrior")
+            if (_selectedClass == "warrior")
             {
-
+                Instantiate(warriorPrefab, Vector3.zero, Quaternion.identity);
+                Debug.Log("warrior Spawned");
             }
-
-            if(_selectedClass == "wizard")
-            {
-
-            }
-
-            if(_selectedClass == "elf")
-            {
-
-            }
-
-            if(_selectedClass == "valkyrie")
-            {
-
-            }
-            Destroy(this);
         }
     }
 }

@@ -4403,15 +4403,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81ee1e5dbdaa5047b0582fc64239ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warrior: {fileID: 11400000, guid: 4cb90a6a8444de747911ab810f280ee6, type: 2}
-  wizard: {fileID: 11400000, guid: d1212678e9454a24389fcab472778136, type: 2}
-  elf: {fileID: 11400000, guid: 632e345ff7e4c5f4d8f71dbbc1c0dfc7, type: 2}
-  valkyrie: {fileID: 11400000, guid: 56df45a5a91fed24a8cee41a077f2bcd, type: 2}
   warriorAnimation: {fileID: 73857023}
   wizardAnimation: {fileID: 296434381}
   elfAnimation: {fileID: 850843670}
   valkyrieAnimation: {fileID: 336100144}
-  selectedClass: none
+  warriorPrefab: {fileID: 430364266241848863, guid: 482f62a43da364d4394e91cf557901c7, type: 3}
+  wizardPrefab: {fileID: 551855127548777615, guid: 53812aab523a12b4ba111ec98c3c4ffc, type: 3}
+  elfPrefab: {fileID: 1513959042734247239, guid: 70d1bb1b2beba044d9aac6ee4fc305d7, type: 3}
+  valkyriePrefab: {fileID: 1425375380070330845, guid: ac957fbabee9a284687f82e4bc35cdc9, type: 3}
+  player1SpawnPoint: {fileID: 0}
 --- !u!1 &2032137170
 GameObject:
   m_ObjectHideFlags: 0
