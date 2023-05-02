@@ -18,8 +18,7 @@ public class BaseCharacterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-       
+        rb = GetComponent<Rigidbody>();       
     }
 
     private void FixedUpdate()
@@ -52,8 +51,7 @@ public class BaseCharacterController : MonoBehaviour
             Instantiate(character.shotPrefab, shotPosition.position, shotPosition.rotation);
             shoot = false;
             StartCoroutine(ShotCoolDown());
-        }
-        
+        }        
     }
 
     IEnumerator ShotCoolDown()
