@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private GameObject character;
-    public float projectileSpeed;
-    // Start is called before the first frame update
-    void Start()
+    private float _projectileSpeed;
+
+    private void Start()
     {
-        projectileSpeed = GameObject.FindGameObjectWithTag("Player").GetComponent<BaseCharacterController>().character.shotTravelSpeed;
+        _projectileSpeed = GameObject.FindGameObjectWithTag("Player").GetComponent<BaseCharacterController>().character.shotTravelSpeed;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        transform.Translate(Vector3.forward *projectileSpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * _projectileSpeed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)

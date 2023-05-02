@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: d1212678e9454a24389fcab472778136, type: 2}
+  characterPreset: {fileID: 11400000, guid: 1986e37a9e7136543ad4b3256100a700, type: 2}
   shotPosition: {fileID: 1742169903}
   fireRate: 0.3
 --- !u!114 &2048662091
