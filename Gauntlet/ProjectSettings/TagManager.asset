@@ -10,6 +10,8 @@ TagManager:
   - Potion
   - Door
   - Bone Pile
+  - melee box
+  - Enemy
   layers:
   - Default
   - TransparentFX
