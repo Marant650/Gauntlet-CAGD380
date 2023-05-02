@@ -64,27 +64,27 @@ public class CharacterSelect : MonoBehaviour
             _selectedClass = "valkyrie";
         }
 
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene(1);
-            if(_selectedClass == "warrior")
+            if (_selectedClass == "warrior")
             {
-
+                Instantiate(warriorPrefab, Vector3.zero, Quaternion.identity);
             }
-
-            if(_selectedClass == "wizard")
+            
+            if (_selectedClass == "wizard")
             {
-
+                Instantiate(wizardPrefab, Vector3.zero, Quaternion.identity);
             }
-
-            if(_selectedClass == "elf")
+            
+            if (_selectedClass == "elf")
             {
-
+                Instantiate(elfPrefab, Vector3.zero, Quaternion.identity);
             }
-
-            if(_selectedClass == "valkyrie")
+            
+            if (_selectedClass == "valkyrie")
             {
-
+                Instantiate(valkyriePrefab, Vector3.zero, Quaternion.identity);
             }
             Destroy(this);
         }
