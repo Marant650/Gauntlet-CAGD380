@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class BaseCharacterController : MonoBehaviour
 {
     Vector2 moveInput;
+    public bool isMoving;
     public PlayerData character;
     public PlayerData characterPreset;
     private Rigidbody rb;
@@ -13,6 +14,8 @@ public class BaseCharacterController : MonoBehaviour
     private bool _ableToShoot = true;
     private float _fireRate = 0.5f;
     private float _shotPauseTime = 0.15f;
+
+    private Transform melee;
 
     private void Awake()
     {
@@ -31,6 +34,8 @@ public class BaseCharacterController : MonoBehaviour
         character.magicVsMonsters = characterPreset.magicVsMonsters;
         character.potionShotVsGenerators = characterPreset.potionShotVsGenerators;
         character.potionShotVsMonsters = characterPreset.potionShotVsMonsters;
+
+        melee = transform.Find("melee hitbox");
     }
 
     private void Start()
@@ -42,10 +47,22 @@ public class BaseCharacterController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector3(moveInput.x, 0, moveInput.y) * character.runSpeed;
+        
     }
 
     private void Update()
     {
+        if(rb.velocity == Vector3.zero)
+        {
+            isMoving = false;
+            melee.gameObject.SetActive(false);
+        }
+
+        if (isMoving)
+        {
+            melee.gameObject.SetActive(true);
+        }
+
         if (moveInput != Vector2.zero)
             transform.forward = new Vector3(moveInput.x, 0, moveInput.y);
     }
@@ -53,7 +70,8 @@ public class BaseCharacterController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        Debug.Log(moveInput);
+        isMoving = true;
+        //Debug.Log(moveInput);
     }
 
     public void Shoot(InputAction.CallbackContext context)
