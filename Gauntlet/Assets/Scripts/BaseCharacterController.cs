@@ -19,6 +19,7 @@ public class BaseCharacterController : MonoBehaviour
 
     private void Awake()
     {
+        character.className = characterPreset.className;
         character.health = characterPreset.health;
         character.score = characterPreset.score;
         character.numberOfKeys = characterPreset.numberOfKeys;
