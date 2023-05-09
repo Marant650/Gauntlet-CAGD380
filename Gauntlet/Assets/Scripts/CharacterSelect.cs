@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CharacterSelect : MonoBehaviour
 {
@@ -14,12 +13,12 @@ public class CharacterSelect : MonoBehaviour
     public GameObject wizardPrefab;
     public GameObject elfPrefab;
     public GameObject valkyriePrefab;
+    public GameObject level1;
 
-    private string _selectedClass = "none";
+    public string playerOneClass = "none";
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
         warriorAnimation.enabled = false;
         wizardAnimation.enabled = false;
         elfAnimation.enabled = false;
@@ -34,7 +33,7 @@ public class CharacterSelect : MonoBehaviour
             wizardAnimation.enabled = false;
             elfAnimation.enabled = false;
             valkyrieAnimation.enabled = false;
-            _selectedClass = "warrior";
+            playerOneClass = "warrior";
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
@@ -43,7 +42,7 @@ public class CharacterSelect : MonoBehaviour
             wizardAnimation.enabled = true;
             elfAnimation.enabled = false;
             valkyrieAnimation.enabled = false;
-            _selectedClass = "wizard";
+            playerOneClass = "wizard";
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
@@ -52,7 +51,7 @@ public class CharacterSelect : MonoBehaviour
             wizardAnimation.enabled = false;
             elfAnimation.enabled = true;
             valkyrieAnimation.enabled = false;
-            _selectedClass = "elf";
+           playerOneClass = "elf";
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -61,32 +60,32 @@ public class CharacterSelect : MonoBehaviour
             wizardAnimation.enabled = false;
             elfAnimation.enabled = false;
             valkyrieAnimation.enabled = true;
-            _selectedClass = "valkyrie";
+            playerOneClass = "valkyrie";
         }
 
         if (Input.GetKey(KeyCode.Space))
         {
-            SceneManager.LoadScene(1);
-            if (_selectedClass == "warrior")
+            if (playerOneClass == "warrior")
             {
                 Instantiate(warriorPrefab, Vector3.zero, Quaternion.identity);
             }
             
-            if (_selectedClass == "wizard")
+            if (playerOneClass == "wizard")
             {
                 Instantiate(wizardPrefab, Vector3.zero, Quaternion.identity);
             }
             
-            if (_selectedClass == "elf")
+            if (playerOneClass == "elf")
             {
                 Instantiate(elfPrefab, Vector3.zero, Quaternion.identity);
             }
             
-            if (_selectedClass == "valkyrie")
+            if (playerOneClass == "valkyrie")
             {
                 Instantiate(valkyriePrefab, Vector3.zero, Quaternion.identity);
             }
-            Destroy(this);
+            level1.SetActive(true);
+            Destroy(this.gameObject);
         }
     }
 }

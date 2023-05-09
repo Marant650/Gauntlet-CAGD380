@@ -145,7 +145,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &2048662092
 MonoBehaviour:
@@ -159,10 +159,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e00d7e4af4c434b8485080647c4153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMoving: 0
   character: {fileID: 11400000, guid: d1212678e9454a24389fcab472778136, type: 2}
   characterPreset: {fileID: 11400000, guid: 1986e37a9e7136543ad4b3256100a700, type: 2}
   shotPosition: {fileID: 1742169903}
-  fireRate: 0.3
 --- !u!114 &2048662091
 MonoBehaviour:
   m_ObjectHideFlags: 0
