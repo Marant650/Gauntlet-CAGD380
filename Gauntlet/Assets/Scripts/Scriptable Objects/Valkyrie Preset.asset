@@ -19,7 +19,7 @@ MonoBehaviour:
   numberOfPotions: 0
   characterPrefab: {fileID: 1425375380070330845, guid: ac957fbabee9a284687f82e4bc35cdc9, type: 3}
   shotPrefab: {fileID: 7895347958898859195, guid: 6409456521896a84c997eeac9dddaa11, type: 3}
-  runSpeed: 2
+  runSpeed: 6
   armorStrength: 0.7
   shotStrength: 1
   shotTravelSpeed: 12.5

@@ -15,7 +15,7 @@ public class BaseCharacterController : MonoBehaviour
     private float _fireRate = 0.5f;
     private float _shotPauseTime = 0.15f;
 
-    private Transform melee;
+    public GameObject melee;
 
     private void Awake()
     {
@@ -35,12 +35,12 @@ public class BaseCharacterController : MonoBehaviour
         character.potionShotVsGenerators = characterPreset.potionShotVsGenerators;
         character.potionShotVsMonsters = characterPreset.potionShotVsMonsters;
 
-        melee = transform.Find("melee hitbox");
+        
     }
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         rb = GetComponent<Rigidbody>();
     }
 
@@ -55,12 +55,12 @@ public class BaseCharacterController : MonoBehaviour
         if(rb.velocity == Vector3.zero)
         {
             isMoving = false;
-            melee.gameObject.SetActive(false);
+            melee.SetActive(false);
         }
 
         if (isMoving)
         {
-            melee.gameObject.SetActive(true);
+            melee.SetActive(true);
         }
 
         if (moveInput != Vector2.zero)

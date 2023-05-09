@@ -12,6 +12,7 @@ TagManager:
   - Bone Pile
   - melee box
   - Enemy
+  - projectile
   layers:
   - Default
   - TransparentFX

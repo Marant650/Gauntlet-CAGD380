@@ -9,6 +9,7 @@ public class DisplayPlayerData : MonoBehaviour
     [SerializeField] private GameObject player;
 
     [SerializeField] private TextMeshProUGUI playerHealth;
+    [SerializeField] private TextMeshProUGUI playerScore;
 
 
 
@@ -22,6 +23,7 @@ public class DisplayPlayerData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerHealth.text = "Health: " + playerData.health; 
+        playerHealth.text = "Health: " + playerData.health;
+        playerScore.text = "Score: " + playerData.score;
     }
 }

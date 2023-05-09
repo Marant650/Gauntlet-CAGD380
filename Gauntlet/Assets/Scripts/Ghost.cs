@@ -27,5 +27,10 @@ public class Ghost : MonoBehaviour
             player.GetComponent<BaseCharacterController>().character.health -= player.GetComponent<BaseCharacterController>().character.armorStrength * damage;
             Destroy(gameObject);
         }
+
+        if(collision.gameObject.tag == "projectile")
+        {           
+            Destroy(gameObject);
+        }
     }
 }
