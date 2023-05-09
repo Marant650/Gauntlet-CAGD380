@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &285860463
 Transform:
   m_ObjectHideFlags: 0
@@ -191,6 +191,7 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 632e345ff7e4c5f4d8f71dbbc1c0dfc7, type: 2}
   characterPreset: {fileID: 11400000, guid: a2ef8455f815a7f49a6ba000e91bf354, type: 2}
   shotPosition: {fileID: 4919794520694717413}
+  melee: {fileID: 285860462}
 --- !u!114 &965837866
 MonoBehaviour:
   m_ObjectHideFlags: 0
