@@ -22,6 +22,7 @@ public class melee : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             Destroy(other.gameObject);
+            character.character.score += 10;
             Debug.Log("Enemy Collided with");
         }
     }
