@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class BaseCharacterController : MonoBehaviour
 {
+    public UiManager uiManager;
     Vector2 moveInput;
     public bool isMoving;
     public PlayerData character;
@@ -107,6 +108,18 @@ public class BaseCharacterController : MonoBehaviour
         {
             Destroy(other.gameObject);
             character.score += 100;
+        }
+
+        if(other.gameObject.tag == "Key")
+        {
+            Destroy(other.gameObject);
+            character.numberOfKeys++;
+        }
+
+        if(other.gameObject.tag == "Door" && character.numberOfKeys > 0)
+        {
+            Destroy(other.gameObject);
+            character.numberOfKeys--;
         }
     }
 }

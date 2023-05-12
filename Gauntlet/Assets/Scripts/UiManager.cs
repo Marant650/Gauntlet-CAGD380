@@ -16,6 +16,10 @@ public class UiManager : MonoBehaviour
     public Text playerOneHealth;
     public Text playerOneScore;
 
+    public Image key;
+    public Image key1;
+    public Image key2;
+
     private void Update()
     {
         SetPlayerOneUI();
@@ -32,6 +36,30 @@ public class UiManager : MonoBehaviour
             playerOneClassName.color = Color.red;
             playerOneHealth.color = Color.red;
             playerOneScore.color = Color.red;
+            if (warrior.numberOfKeys == 0)
+            {
+                key.enabled = false;
+                key1.enabled = false;
+                key2.enabled = false;
+            }
+            if (warrior.numberOfKeys == 1)
+            {
+                key.enabled = true;
+                key1.enabled = false;
+                key2.enabled = false;
+            }
+            if (warrior.numberOfKeys == 2)
+            {
+                key.enabled = true;
+                key1.enabled = true;
+                key2.enabled = false;
+            }
+            if (warrior.numberOfKeys == 3)
+            {
+                key.enabled = true;
+                key1.enabled = true;
+                key2.enabled = true;
+            }
         }
         
         if (characterSelect.playerOneClass == "wizard")
