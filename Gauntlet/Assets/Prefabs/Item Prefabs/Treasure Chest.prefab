@@ -104,6 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2578139145411426654}
+  - component: {fileID: 5499696418712284671}
   m_Layer: 3
   m_Name: Treasure Chest
   m_TagString: Treasure
@@ -135,6 +136,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5499696418712284671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2578139145411426655}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1, z: 0.8}
+  m_Center: {x: 1, y: 0, z: 1}
 --- !u!1 &2578139145419370440
 GameObject:
   m_ObjectHideFlags: 0

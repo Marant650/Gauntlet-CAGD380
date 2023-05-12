@@ -5,7 +5,6 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     private float _projectileSpeed;
-    private int score;
     private BaseCharacterController player;
 
     private void Start()
@@ -23,9 +22,13 @@ public class Projectile : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Bone Pile")
         {
-            player.character.score += 10;
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
         }
         
+        if(collision.gameObject.tag == "Wall"|| collision.gameObject.tag == "Door")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -27,7 +27,7 @@ public class CharacterSelect : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             warriorAnimation.enabled = true;
             wizardAnimation.enabled = false;
@@ -36,7 +36,7 @@ public class CharacterSelect : MonoBehaviour
             playerOneClass = "warrior";
         }
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             warriorAnimation.enabled = false;
             wizardAnimation.enabled = true;
@@ -45,7 +45,7 @@ public class CharacterSelect : MonoBehaviour
             playerOneClass = "wizard";
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             warriorAnimation.enabled = false;
             wizardAnimation.enabled = false;
@@ -54,7 +54,7 @@ public class CharacterSelect : MonoBehaviour
            playerOneClass = "elf";
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             warriorAnimation.enabled = false;
             wizardAnimation.enabled = false;

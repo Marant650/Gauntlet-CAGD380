@@ -34,9 +34,7 @@ public class BaseCharacterController : MonoBehaviour
         character.magicVsGenerators = characterPreset.magicVsGenerators;
         character.magicVsMonsters = characterPreset.magicVsMonsters;
         character.potionShotVsGenerators = characterPreset.potionShotVsGenerators;
-        character.potionShotVsMonsters = characterPreset.potionShotVsMonsters;
-
-        
+        character.potionShotVsMonsters = characterPreset.potionShotVsMonsters;  
     }
 
     private void Start()
@@ -48,7 +46,6 @@ public class BaseCharacterController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector3(moveInput.x, 0, moveInput.y) * character.runSpeed;
-        
     }
 
     private void Update()
@@ -72,7 +69,6 @@ public class BaseCharacterController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
         isMoving = true;
-        //Debug.Log(moveInput);
     }
 
     public void Shoot(InputAction.CallbackContext context)
@@ -97,5 +93,20 @@ public class BaseCharacterController : MonoBehaviour
         rb.isKinematic = true;
         yield return new WaitForSeconds(_shotPauseTime);
         rb.isKinematic = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Food")
+        {
+            Destroy(other.gameObject);
+            character.health += 100;
+        }
+
+        if (other.gameObject.tag == "Treasure")
+        {
+            Destroy(other.gameObject);
+            character.score += 100;
+        }
     }
 }
