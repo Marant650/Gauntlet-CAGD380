@@ -32,7 +32,7 @@ public class demon : MonoBehaviour
         if(Vector3.Distance(transform.position, player1.transform.position) <= 15)
         {
             ShootProjectile();
-        }
+        }        
     }
 
     private void ShootProjectile()
