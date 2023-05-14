@@ -22,7 +22,7 @@ public class DeathEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        if (health <= 0 || maxDamageInflicted >= 200)
         {
             Destroy(gameObject);
         }
