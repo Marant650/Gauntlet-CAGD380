@@ -11,11 +11,15 @@ public class demon : MonoBehaviour
 
 
     public GameObject player1;
+    private Vector3 enemyToPlayerVector;
+    private Vector3 targetdirection;
 
     public GameObject projectile;
     public Transform projectileSpawner;
 
     private Transform stoppingDistance;
+
+    public int rotationSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -28,17 +32,22 @@ public class demon : MonoBehaviour
     void Update()
     {
         agent.destination = player1.transform.position;
-
-        if(Vector3.Distance(transform.position, player1.transform.position) <= 15)
+        enemyToPlayerVector = player1.transform.position - transform.position;
+        targetdirection = enemyToPlayerVector.normalized;
+        if (Vector3.Distance(transform.position, player1.transform.position) <= 15)
         {
+            transform.forward = targetdirection;
             ShootProjectile();
-        }        
+        } 
+        
+        
     }
 
     private void ShootProjectile()
     {
         if (timeBetweenShots <= 0)
         {
+                     
             Instantiate(projectile, projectileSpawner.transform.position, transform.rotation);
             timeBetweenShots = startTimeBetweenShots;
         }
