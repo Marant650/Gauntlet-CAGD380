@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class grunt : MonoBehaviour
+public class DeathEnemy : MonoBehaviour
 {
     private PlayerData character;
     public GameObject player;
-    public int damage = 15;
+    public int damage = 50;
+    public int maxDamageInflicted;
+    public int health;
     // public int attackCooldown;
 
     public float damageTimeout = 2f;
@@ -15,13 +17,15 @@ public class grunt : MonoBehaviour
     void Start()
     {
 
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
 
     }
 
@@ -30,12 +34,12 @@ public class grunt : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             player = collision.gameObject;
-            
+
         }
 
         if (collision.gameObject.tag == "projectile")
         {
-            Destroy(gameObject);
+            health -= 1;
         }
     }
 
@@ -46,16 +50,21 @@ public class grunt : MonoBehaviour
             AttackPlayer();
             StartCoroutine(damageTimer());
         }
-           
+
     }
 
     private void AttackPlayer()
     {
-        player.GetComponent<BaseCharacterController>().character.health -= player.GetComponent<BaseCharacterController>().character.armorStrength * damage;
+        if(maxDamageInflicted < 200)
+        {
+            player.GetComponent<BaseCharacterController>().character.health -= player.GetComponent<BaseCharacterController>().character.armorStrength * damage;
+            maxDamageInflicted += damage;
+        }
+       
     }
 
-    
-   
+
+
     private IEnumerator damageTimer()
     {
         canTakeDamage = false;

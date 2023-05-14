@@ -26,6 +26,12 @@ public class Projectile : MonoBehaviour
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
         }
+
+        if(collision.gameObject.tag == "Death")
+        {
+            player.character.score += 1;
+            Destroy(gameObject);
+        }
         
         if(collision.gameObject.tag == "Wall"|| collision.gameObject.tag == "Door")
         {
