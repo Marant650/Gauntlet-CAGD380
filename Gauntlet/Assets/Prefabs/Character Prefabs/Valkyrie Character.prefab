@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e00d7e4af4c434b8485080647c4153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiManager: {fileID: 0}
   isMoving: 0
   character: {fileID: 11400000, guid: 56df45a5a91fed24a8cee41a077f2bcd, type: 2}
   characterPreset: {fileID: 11400000, guid: 5295438914a710048a7876f9ad68cca8, type: 2}
@@ -333,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8012253217786849682, guid: d75b6156516e01b418e43925d70c8655, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 8012253217786849682, guid: d75b6156516e01b418e43925d70c8655, type: 3}
       propertyPath: m_LocalRotation.w

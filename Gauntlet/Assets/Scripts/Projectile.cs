@@ -22,6 +22,7 @@ public class Projectile : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Bone Pile")
         {
+            player.character.score += 10;
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
         }

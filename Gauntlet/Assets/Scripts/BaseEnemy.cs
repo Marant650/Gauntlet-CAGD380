@@ -21,4 +21,6 @@ public class BaseEnemy : MonoBehaviour
     {
         agent.destination = player1.transform.position;
     }
+
+   
 }
