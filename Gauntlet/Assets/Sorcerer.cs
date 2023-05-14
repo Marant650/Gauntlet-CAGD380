@@ -22,6 +22,8 @@ public class Sorcerer : MonoBehaviour
 
     private Transform stoppingDistance;
 
+    private Vector3 enemyToPlayerVector;
+    private Vector3 targetDirection;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,13 +36,16 @@ public class Sorcerer : MonoBehaviour
     void Update()
     {
         agent.destination = player1.transform.position;
-        
-        if(timeBetweenInvis == startTimebewteenInvis)
+        enemyToPlayerVector = player1.transform.position - transform.position;
+        targetDirection = enemyToPlayerVector.normalized;
+
+        if (timeBetweenInvis == startTimebewteenInvis)
         {
             invisibilityActivated = false;
         }
         if (Vector3.Distance(transform.position, player1.transform.position) <= 15)
         {
+            transform.forward = targetDirection;
             ShootProjectile();
         }
     }  
@@ -64,11 +69,13 @@ public class Sorcerer : MonoBehaviour
         { 
             gameObject.GetComponent<MeshRenderer>().enabled = false;
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
         }
         else if (gameObject.GetComponent<MeshRenderer>().enabled == false && gameObject.GetComponent<CapsuleCollider>().enabled == false)
         {
             gameObject.GetComponent<MeshRenderer>().enabled = true;
             gameObject.GetComponent<CapsuleCollider>().enabled = true;
+            gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
         }
 
 

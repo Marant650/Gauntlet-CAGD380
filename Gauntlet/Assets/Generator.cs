@@ -27,8 +27,9 @@ public class Generator : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(enemyPrefab, transform.position + Vector3.forward, Quaternion.identity);
             yield return new WaitForSeconds(3);
+            Instantiate(enemyPrefab, transform.position + Vector3.forward, Quaternion.identity);
+            
         }
         
     }
