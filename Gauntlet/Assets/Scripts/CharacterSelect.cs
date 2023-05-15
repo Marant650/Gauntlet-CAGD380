@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CharacterSelect : MonoBehaviour
 {
+    public PlayerInputManager playerInputManager;
+
     public Animator warriorAnimation;
     public Animator wizardAnimation;
     public Animator elfAnimation;
@@ -85,7 +88,12 @@ public class CharacterSelect : MonoBehaviour
                 Instantiate(valkyriePrefab, Vector3.zero, Quaternion.identity);
             }
             level1.SetActive(true);
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
+    }
+
+    public void PlayerJoined()
+    {
+        this.gameObject.SetActive(true);
     }
 }
