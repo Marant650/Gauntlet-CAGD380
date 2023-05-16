@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e00d7e4af4c434b8485080647c4153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiManager: {fileID: 0}
   isMoving: 0
   character: {fileID: 11400000, guid: 4cb90a6a8444de747911ab810f280ee6, type: 2}
   characterPreset: {fileID: 11400000, guid: adad736291ac8984185c1e1572649f67, type: 2}
@@ -222,6 +223,26 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 87bffbef-3642-48eb-9ad1-ae2174572a59
     m_ActionName: Character/Shoot[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6ccdb30e-6fb6-4241-996b-89261218d4fa
+    m_ActionName: Chacter Select/Select Character W[/Keyboard/w,/DualShock4GamepadHID/leftStick/up]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f144b5c2-296e-43dd-a913-57a35b82ee52
+    m_ActionName: Chacter Select/Select Character A[/Keyboard/a,/DualShock4GamepadHID/leftStick/left]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e01628a6-17c5-45ba-a8f5-0eb5aea01cad
+    m_ActionName: Chacter Select/Select character S[/Keyboard/s,/DualShock4GamepadHID/leftStick/down]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4836ea03-03a1-4393-bf04-2ac236a4a825
+    m_ActionName: Chacter Select/Select Character D[/Keyboard/d,/DualShock4GamepadHID/leftStick/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8401c543-6433-4ddb-aae6-47e53bed0676
+    m_ActionName: Chacter Select/Spawn Character[/DualShock4GamepadHID/buttonSouth,/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Character
