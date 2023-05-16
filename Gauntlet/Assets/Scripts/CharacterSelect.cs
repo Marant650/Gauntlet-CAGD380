@@ -7,6 +7,8 @@ public class CharacterSelect : MonoBehaviour
 {
     public NewPlayerManager NewPlayerManager;
 
+    public GameObject cameraPrefab;
+
     public Animator warriorAnimation;
     public Animator wizardAnimation;
     public Animator elfAnimation;
@@ -27,6 +29,8 @@ public class CharacterSelect : MonoBehaviour
         wizardAnimation.enabled = false;
         elfAnimation.enabled = false;
         valkyrieAnimation.enabled = false;
+
+        
     }
 
     private void Update()
@@ -71,22 +75,26 @@ public class CharacterSelect : MonoBehaviour
         {
             if (playerOneClass == "warrior")
             {
-                Instantiate(warriorPrefab, Vector3.zero, Quaternion.identity);
+                GameObject warrior = Instantiate(warriorPrefab, Vector3.zero, Quaternion.identity);
+                cameraPrefab.GetComponent<MultiTargetCamera>().cameraTargets.Add(warrior.transform);
             }
             
             if (playerOneClass == "wizard")
             {
-                Instantiate(wizardPrefab, Vector3.zero, Quaternion.identity);
+                GameObject wizard = Instantiate(wizardPrefab, Vector3.zero, Quaternion.identity);
+                cameraPrefab.GetComponent<MultiTargetCamera>().cameraTargets.Add(wizard.transform);
             }
 
             if (playerOneClass == "elf")
             {
-                Instantiate(elfPrefab, Vector3.zero, Quaternion.identity);
+               GameObject elf = Instantiate(elfPrefab, Vector3.zero, Quaternion.identity);
+                cameraPrefab.GetComponent<MultiTargetCamera>().cameraTargets.Add(elf.transform);
             }
 
             if (playerOneClass == "valkyrie")
             {
-                Instantiate(valkyriePrefab, Vector3.zero, Quaternion.identity);
+              GameObject  valkyrie = Instantiate(valkyriePrefab, Vector3.zero, Quaternion.identity);
+                cameraPrefab.GetComponent<MultiTargetCamera>().cameraTargets.Add(valkyrie.transform);
             }
             level1.SetActive(true);
             this.gameObject.SetActive(false);

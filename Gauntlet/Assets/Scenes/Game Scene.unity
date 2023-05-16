@@ -1124,7 +1124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &227167530
 Transform:
   m_ObjectHideFlags: 0
@@ -6520,7 +6520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1414495640
 Transform:
   m_ObjectHideFlags: 0
@@ -7992,9 +7992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89014d6f5fb78e8459da1ed9b170a617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTargets:
-  - {fileID: 0}
-  - {fileID: 0}
+  cameraTargets: []
   smoothTime: 0.2
   minZoom: 30
   maxZoom: 10
@@ -9269,7 +9267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81ee1e5dbdaa5047b0582fc64239ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewPlayerManager: {fileID: 128691642}
+  NewPlayerManager: {fileID: 0}
+  cameraPrefab: {fileID: 1710897581}
   warriorAnimation: {fileID: 1260534435}
   wizardAnimation: {fileID: 1089503981}
   elfAnimation: {fileID: 1014612762}
