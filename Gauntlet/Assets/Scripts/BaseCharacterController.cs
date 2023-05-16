@@ -111,7 +111,7 @@ public class BaseCharacterController : MonoBehaviour
         if (other.gameObject.tag == "Food")
         {
             Destroy(other.gameObject);
-            character.health += 100;
+            character.health += 20;
         }
 
         if (other.gameObject.tag == "Treasure")
