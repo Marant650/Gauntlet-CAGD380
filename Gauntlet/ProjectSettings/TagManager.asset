@@ -16,6 +16,11 @@ TagManager:
   - Wall
   - Death
   - power up
+  - strength potion
+  - speed potion
+  - shotspeed potion
+  - shotpower potion
+  - magic potion
   layers:
   - Default
   - TransparentFX

@@ -137,6 +137,36 @@ public class BaseCharacterController : MonoBehaviour
             character.powerup += 1;
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.tag == "strength potion")
+        {
+            character.armorStrength += .1f;
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "speed potion")
+        {
+            character.runSpeed += .5f;
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "shotspeed potion")
+        {
+            character.shotTravelSpeed += .2f;
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "shotpower potion")
+        {
+            character.shotStrength += .2f;
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "magic potion")
+        {
+            character.magicVsMonsters += .3f;
+            Destroy(other.gameObject);
+        }
     }
 
     
