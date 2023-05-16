@@ -25,9 +25,10 @@ public class MultiTargetCamera : MonoBehaviour
     {
         _players = GameObject.FindGameObjectsWithTag("Player");
 
-        foreach(GameObject i in _players)
+        foreach (GameObject i in _players)
         {
-            cameraTargets.Add(_players[i].GetComponent<Transform>());
+            if (!cameraTargets.Contains((i.GetComponent<Transform>())))
+                cameraTargets.Add(i.GetComponent<Transform>());
         }
     }
 
@@ -58,7 +59,7 @@ public class MultiTargetCamera : MonoBehaviour
     private float GetGreatestDistance()
     {
         var bounds = new Bounds(cameraTargets[0].position, Vector3.zero);
-        for(int i = 0; i < cameraTargets.Count; i++)
+        for (int i = 0; i < cameraTargets.Count; i++)
         {
             bounds.Encapsulate(cameraTargets[i].position);
         }
