@@ -3150,6 +3150,24 @@ Transform:
   m_Father: {fileID: 227167530}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &332879898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4077763699172498704, guid: c2902d0752e69694bbd716432abb5adb, type: 3}
+  m_PrefabInstance: {fileID: 764795051}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &332879903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332879898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e1d4fc6d0cebcb47a78ac5dc4ca24c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winScreen: {fileID: 1648702944}
 --- !u!1001 &344702006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12837,7 +12855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1414495640
 Transform:
   m_ObjectHideFlags: 0
@@ -15580,8 +15598,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655830450}
   m_LocalRotation: {x: -0, y: 0.00000016391276, z: -0, w: -1}
-  m_LocalPosition: {x: 21.91, y: 0, z: -7.73}
-  m_LocalScale: {x: 5.3786426, y: 1, z: 0.5}
+  m_LocalPosition: {x: 20.95, y: 0, z: -13.17}
+  m_LocalScale: {x: 7.0504875, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 2087557186}
   m_RootOrder: 45
@@ -18858,7 +18876,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1848675713}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 332879903}
+        m_TargetAssemblyTypeName: Endgame, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1848675713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18981,7 +19011,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857034962}
   m_LocalRotation: {x: -0, y: 0.7071066, z: -0, w: -0.70710707}
-  m_LocalPosition: {x: -8.16, y: 0, z: 6.62}
+  m_LocalPosition: {x: -8.36, y: 0, z: 6.09}
   m_LocalScale: {x: 4.715589, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 318960490}
