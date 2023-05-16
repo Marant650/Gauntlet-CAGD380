@@ -35,7 +35,8 @@ public class BaseCharacterController : MonoBehaviour
         character.magicVsGenerators = characterPreset.magicVsGenerators;
         character.magicVsMonsters = characterPreset.magicVsMonsters;
         character.potionShotVsGenerators = characterPreset.potionShotVsGenerators;
-        character.potionShotVsMonsters = characterPreset.potionShotVsMonsters;  
+        character.potionShotVsMonsters = characterPreset.potionShotVsMonsters;
+        character.powerup = characterPreset.powerup;
     }
 
     private void Start()
@@ -96,6 +97,15 @@ public class BaseCharacterController : MonoBehaviour
         rb.isKinematic = false;
     }
 
+    public void UseItem()
+    {
+        if(character.powerup > 0)
+        {
+            EventBus.Publish(PowerupEvent.PowerupUsed);
+            character.powerup -= 1;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Food")
@@ -121,5 +131,13 @@ public class BaseCharacterController : MonoBehaviour
             Destroy(other.gameObject);
             character.numberOfKeys--;
         }
+
+        if(other.gameObject.tag == "power up")
+        {
+            character.powerup += 1;
+            Destroy(other.gameObject);
+        }
     }
+
+    
 }

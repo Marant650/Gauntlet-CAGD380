@@ -15,6 +15,7 @@ TagManager:
   - projectile
   - Wall
   - Death
+  - power up
   layers:
   - Default
   - TransparentFX

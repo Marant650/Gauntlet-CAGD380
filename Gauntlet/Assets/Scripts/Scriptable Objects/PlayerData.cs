@@ -11,6 +11,7 @@ public class PlayerData : ScriptableObject
     public int score;
     public int numberOfKeys;
     public int numberOfPotions;
+    public int powerup;
 
     //Game Objects
     public GameObject characterPrefab;

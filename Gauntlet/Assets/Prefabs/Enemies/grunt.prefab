@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 8489485397741526459}
   - component: {fileID: 776250508}
   - component: {fileID: -3548092690065602802}
+  - component: {fileID: 3838198016962589553}
   m_Layer: 0
   m_Name: grunt
   m_TagString: Enemy
@@ -231,7 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144eff654f40d0f4686ecd2fee2ee938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 0}
+  _players: []
+  chaseTarget: {fileID: 0}
 --- !u!54 &-3548092690065602802
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -248,3 +250,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &3838198016962589553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8489485397741526456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44fb33d8db501f34691f31871c8c98bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

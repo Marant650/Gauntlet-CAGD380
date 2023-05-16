@@ -243,6 +243,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 8401c543-6433-4ddb-aae6-47e53bed0676
     m_ActionName: Chacter Select/Spawn Character[/DualShock4GamepadHID/buttonSouth,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1313756253}
+        m_TargetAssemblyTypeName: BaseCharacterController, Assembly-CSharp
+        m_MethodName: UseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 680c0cd1-0248-4101-82c8-0ccdcfc1a68d
+    m_ActionName: Character/Use Item[/Keyboard/x]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Character
@@ -358,7 +374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8012253217786849682, guid: d75b6156516e01b418e43925d70c8655, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.07
+      value: 0.266
       objectReference: {fileID: 0}
     - target: {fileID: 8012253217786849682, guid: d75b6156516e01b418e43925d70c8655, type: 3}
       propertyPath: m_LocalRotation.w

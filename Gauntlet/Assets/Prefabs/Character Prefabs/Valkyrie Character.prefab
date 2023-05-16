@@ -223,6 +223,42 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 87bffbef-3642-48eb-9ad1-ae2174572a59
     m_ActionName: Character/Shoot[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1756877820}
+        m_TargetAssemblyTypeName: BaseCharacterController, Assembly-CSharp
+        m_MethodName: UseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 680c0cd1-0248-4101-82c8-0ccdcfc1a68d
+    m_ActionName: Character/Use Item[/Keyboard/x]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6ccdb30e-6fb6-4241-996b-89261218d4fa
+    m_ActionName: Chacter Select/Select Character W[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f144b5c2-296e-43dd-a913-57a35b82ee52
+    m_ActionName: Chacter Select/Select Character A[/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e01628a6-17c5-45ba-a8f5-0eb5aea01cad
+    m_ActionName: Chacter Select/Select character S[/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4836ea03-03a1-4393-bf04-2ac236a4a825
+    m_ActionName: Chacter Select/Select Character D[/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8401c543-6433-4ddb-aae6-47e53bed0676
+    m_ActionName: Chacter Select/Spawn Character[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Character
