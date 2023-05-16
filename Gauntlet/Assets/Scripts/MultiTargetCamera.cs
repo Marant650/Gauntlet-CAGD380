@@ -5,6 +5,7 @@ using UnityEngine;
 public class MultiTargetCamera : MonoBehaviour
 {
     public List<Transform> cameraTargets;
+    private GameObject[] _players;
 
     public float smoothTime = .5f;
     public float minZoom = 40.0f;
@@ -18,6 +19,16 @@ public class MultiTargetCamera : MonoBehaviour
     private void Start()
     {
         cam = GetComponent<Camera>();
+    }
+
+    private void Update()
+    {
+        _players = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach(GameObject i in _players)
+        {
+            cameraTargets.Add(_players[i].GetComponent<Transform>());
+        }
     }
 
     private void LateUpdate()

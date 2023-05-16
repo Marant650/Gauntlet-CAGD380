@@ -29,8 +29,6 @@ public class CharacterSelect : MonoBehaviour
         wizardAnimation.enabled = false;
         elfAnimation.enabled = false;
         valkyrieAnimation.enabled = false;
-
-        
     }
 
     private void Update()
@@ -59,7 +57,7 @@ public class CharacterSelect : MonoBehaviour
             wizardAnimation.enabled = false;
             elfAnimation.enabled = true;
             valkyrieAnimation.enabled = false;
-           playerOneClass = "elf";
+            playerOneClass = "elf";
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
@@ -78,7 +76,7 @@ public class CharacterSelect : MonoBehaviour
                 GameObject warrior = Instantiate(warriorPrefab, Vector3.zero, Quaternion.identity);
                 cameraPrefab.GetComponent<MultiTargetCamera>().cameraTargets.Add(warrior.transform);
             }
-            
+
             if (playerOneClass == "wizard")
             {
                 GameObject wizard = Instantiate(wizardPrefab, Vector3.zero, Quaternion.identity);
@@ -87,13 +85,13 @@ public class CharacterSelect : MonoBehaviour
 
             if (playerOneClass == "elf")
             {
-               GameObject elf = Instantiate(elfPrefab, Vector3.zero, Quaternion.identity);
+                GameObject elf = Instantiate(elfPrefab, Vector3.zero, Quaternion.identity);
                 cameraPrefab.GetComponent<MultiTargetCamera>().cameraTargets.Add(elf.transform);
             }
 
             if (playerOneClass == "valkyrie")
             {
-              GameObject  valkyrie = Instantiate(valkyriePrefab, Vector3.zero, Quaternion.identity);
+                GameObject valkyrie = Instantiate(valkyriePrefab, Vector3.zero, Quaternion.identity);
                 cameraPrefab.GetComponent<MultiTargetCamera>().cameraTargets.Add(valkyrie.transform);
             }
             level1.SetActive(true);

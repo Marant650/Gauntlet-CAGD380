@@ -13,6 +13,7 @@ public class UiManager : MonoBehaviour
     public PlayerData elf;
     public PlayerData valkyrie;
 
+    //Player One
     public Text playerOneClassName;
     public Text playerOneHealth;
     public Text playerOneScore;
@@ -21,6 +22,7 @@ public class UiManager : MonoBehaviour
     public Image playerOnekey1;
     public Image playerOnekey2;
 
+    //Player Two
     public Text playerTwoClassName;
     public Text playerTwoHealth;
     public Text playerTwoScore;
@@ -29,10 +31,30 @@ public class UiManager : MonoBehaviour
     public Image playerTwokey1;
     public Image playerTwokey2;
 
+    //Player Three
+    public Text playerThreeClassName;
+    public Text playerThreeHealth;
+    public Text playerThreeScore;
+
+    public Image playerThreekey;
+    public Image playerThreekey1;
+    public Image playerThreekey2;
+
+    //Player Four
+    public Text playerFourClassName;
+    public Text playerFourHealth;
+    public Text playerFourScore;
+
+    public Image playerFourkey;
+    public Image playerFourkey1;
+    public Image playerFourkey2;
+
     private void Update()
     {
         SetPlayerOneUI();
         SetPlayerTwoUI();
+        SetPlayerThreeUI();
+        SetPlayerFourUI();
     }
 
 
@@ -323,5 +345,294 @@ public class UiManager : MonoBehaviour
             }
         }
     }
+
+    //PLAYER THREE
+    private void SetPlayerThreeUI()
+    {
+        if (newPlayerManager.currentPlayersClasses[2] == "warrior")
+        {
+            playerThreeClassName.text = "Warrior";
+            playerThreeHealth.text = "Health: " + Mathf.Round(warrior.health);
+            warrior.health -= 1 * Time.deltaTime;
+            playerThreeScore.text = "Score: " + Mathf.Round(warrior.score);
+            playerThreeClassName.color = Color.red;
+            playerThreeHealth.color = Color.red;
+            playerThreeScore.color = Color.red;
+            if (warrior.numberOfKeys == 0)
+            {
+                playerThreekey.enabled = false;
+                playerThreekey1.enabled = false;
+                playerThreekey2.enabled = false;
+            }
+            if (warrior.numberOfKeys == 1)
+            {
+                playerThreekey.enabled = true;
+                playerThreekey1.enabled = false;
+                playerThreekey2.enabled = false;
+            }
+            if (warrior.numberOfKeys == 2)
+            {
+                playerThreekey.enabled = true;
+                playerThreekey1.enabled = true;
+                playerThreekey2.enabled = false;
+            }
+            if (warrior.numberOfKeys == 3)
+            {
+                playerThreekey.enabled = true;
+                playerThreekey1.enabled = true;
+                playerThreekey2.enabled = true;
+            }
+        }
+
+        if (newPlayerManager.currentPlayersClasses[2] == "wizard")
+        {
+            playerThreeClassName.text = "Wizard";
+            playerThreeHealth.text = "Health: " + Mathf.Round(wizard.health);
+            wizard.health -= 1 * Time.deltaTime;
+            playerThreeScore.text = "Score: " + Mathf.Round(wizard.score);
+            playerThreeClassName.color = Color.yellow;
+            playerThreeHealth.color = Color.yellow;
+            playerThreeScore.color = Color.yellow;
+            if (wizard.numberOfKeys == 0)
+            {
+                playerThreekey.enabled = false;
+                playerThreekey1.enabled = false;
+                playerThreekey2.enabled = false;
+            }
+            if (wizard.numberOfKeys == 1)
+            {
+                playerThreekey.enabled = true;
+                playerThreekey1.enabled = false;
+                playerThreekey2.enabled = false;
+            }
+            if (wizard.numberOfKeys == 2)
+            {
+                playerThreekey.enabled = true;
+                playerThreekey1.enabled = true;
+                playerThreekey2.enabled = false;
+            }
+            if (wizard.numberOfKeys == 3)
+            {
+                playerThreekey.enabled = true;
+                playerThreekey1.enabled = true;
+                playerThreekey2.enabled = true;
+            }
+        }
+
+        if (newPlayerManager.currentPlayersClasses[2] == "elf")
+        {
+            playerThreeClassName.text = "Elf";
+            playerThreeHealth.text = "Health: " + Mathf.Round(elf.health);
+            elf.health -= 1 * Time.deltaTime;
+            playerThreeScore.text = "Score: " + Mathf.Round(elf.score);
+            playerThreeClassName.color = Color.green;
+            playerThreeHealth.color = Color.green;
+            playerThreeScore.color = Color.green;
+            if (elf.numberOfKeys == 0)
+            {
+                playerThreekey.enabled = false;
+                playerThreekey1.enabled = false;
+                playerThreekey2.enabled = false;
+            }
+            if (elf.numberOfKeys == 1)
+            {
+                playerThreekey.enabled = true;
+                playerThreekey1.enabled = false;
+                playerThreekey2.enabled = false;
+            }
+            if (elf.numberOfKeys == 2)
+            {
+                playerThreekey.enabled = true;
+                playerThreekey1.enabled = true;
+                playerThreekey2.enabled = false;
+            }
+            if (elf.numberOfKeys == 3)
+            {
+                playerThreekey.enabled = true;
+                playerThreekey1.enabled = true;
+                playerThreekey2.enabled = true;
+            }
+        }
+
+        if (newPlayerManager.currentPlayersClasses[2] == "valkyrie")
+        {
+            playerThreeClassName.text = "Valkyrie";
+            playerThreeHealth.text = "Health: " + Mathf.Round(valkyrie.health);
+            valkyrie.health -= 1 * Time.deltaTime;
+            playerThreeScore.text = "Score: " + Mathf.Round(valkyrie.score);
+            playerThreeClassName.color = Color.blue;
+            playerThreeHealth.color = Color.blue;
+            playerThreeScore.color = Color.blue;
+            if (valkyrie.numberOfKeys == 0)
+            {
+                playerThreekey.enabled = false;
+                playerThreekey1.enabled = false;
+                playerThreekey2.enabled = false;
+            }
+            if (valkyrie.numberOfKeys == 1)
+            {
+                playerThreekey.enabled = true;
+                playerThreekey1.enabled = false;
+                playerThreekey2.enabled = false;
+            }
+            if (valkyrie.numberOfKeys == 2)
+            {
+                playerThreekey.enabled = true;
+                playerThreekey1.enabled = true;
+                playerThreekey2.enabled = false;
+            }
+            if (valkyrie.numberOfKeys == 3)
+            {
+                playerThreekey.enabled = true;
+                playerThreekey1.enabled = true;
+                playerThreekey2.enabled = true;
+            }
+        }
+    }
+
+    //PLAYER FOUR
+    private void SetPlayerFourUI()
+    {
+        if (newPlayerManager.currentPlayersClasses[3] == "warrior")
+        {
+            playerFourClassName.text = "Warrior";
+            playerFourHealth.text = "Health: " + Mathf.Round(warrior.health);
+            warrior.health -= 1 * Time.deltaTime;
+            playerFourScore.text = "Score: " + Mathf.Round(warrior.score);
+            playerFourClassName.color = Color.red;
+            playerFourHealth.color = Color.red;
+            playerFourScore.color = Color.red;
+            if (warrior.numberOfKeys == 0)
+            {
+                playerFourkey.enabled = false;
+                playerFourkey1.enabled = false;
+                playerFourkey2.enabled = false;
+            }
+            if (warrior.numberOfKeys == 1)
+            {
+                playerFourkey.enabled = true;
+                playerFourkey1.enabled = false;
+                playerFourkey2.enabled = false;
+            }
+            if (warrior.numberOfKeys == 2)
+            {
+                playerFourkey.enabled = true;
+                playerFourkey1.enabled = true;
+                playerFourkey2.enabled = false;
+            }
+            if (warrior.numberOfKeys == 3)
+            {
+                playerFourkey.enabled = true;
+                playerFourkey1.enabled = true;
+                playerFourkey2.enabled = true;
+            }
+        }
+
+        if (newPlayerManager.currentPlayersClasses[3] == "wizard")
+        {
+            playerFourClassName.text = "Wizard";
+            playerFourHealth.text = "Health: " + Mathf.Round(wizard.health);
+            wizard.health -= 1 * Time.deltaTime;
+            playerFourScore.text = "Score: " + Mathf.Round(wizard.score);
+            playerFourClassName.color = Color.yellow;
+            playerFourHealth.color = Color.yellow;
+            playerFourScore.color = Color.yellow;
+            if (wizard.numberOfKeys == 0)
+            {
+                playerFourkey.enabled = false;
+                playerFourkey1.enabled = false;
+                playerFourkey2.enabled = false;
+            }
+            if (wizard.numberOfKeys == 1)
+            {
+                playerFourkey.enabled = true;
+                playerFourkey1.enabled = false;
+                playerFourkey2.enabled = false;
+            }
+            if (wizard.numberOfKeys == 2)
+            {
+                playerFourkey.enabled = true;
+                playerFourkey1.enabled = true;
+                playerFourkey2.enabled = false;
+            }
+            if (wizard.numberOfKeys == 3)
+            {
+                playerFourkey.enabled = true;
+                playerFourkey1.enabled = true;
+                playerFourkey2.enabled = true;
+            }
+        }
+
+        if (newPlayerManager.currentPlayersClasses[3] == "elf")
+        {
+            playerFourClassName.text = "Elf";
+            playerFourHealth.text = "Health: " + Mathf.Round(elf.health);
+            elf.health -= 1 * Time.deltaTime;
+            playerFourScore.text = "Score: " + Mathf.Round(elf.score);
+            playerFourClassName.color = Color.green;
+            playerFourHealth.color = Color.green;
+            playerFourScore.color = Color.green;
+            if (elf.numberOfKeys == 0)
+            {
+                playerFourkey.enabled = false;
+                playerFourkey1.enabled = false;
+                playerFourkey2.enabled = false;
+            }
+            if (elf.numberOfKeys == 1)
+            {
+                playerFourkey.enabled = true;
+                playerFourkey1.enabled = false;
+                playerFourkey2.enabled = false;
+            }
+            if (elf.numberOfKeys == 2)
+            {
+                playerFourkey.enabled = true;
+                playerFourkey1.enabled = true;
+                playerFourkey2.enabled = false;
+            }
+            if (elf.numberOfKeys == 3)
+            {
+                playerFourkey.enabled = true;
+                playerFourkey1.enabled = true;
+                playerFourkey2.enabled = true;
+            }
+        }
+
+        if (newPlayerManager.currentPlayersClasses[3] == "valkyrie")
+        {
+            playerFourClassName.text = "Valkyrie";
+            playerFourHealth.text = "Health: " + Mathf.Round(valkyrie.health);
+            valkyrie.health -= 1 * Time.deltaTime;
+            playerFourScore.text = "Score: " + Mathf.Round(valkyrie.score);
+            playerFourClassName.color = Color.blue;
+            playerFourHealth.color = Color.blue;
+            playerFourScore.color = Color.blue;
+            if (valkyrie.numberOfKeys == 0)
+            {
+                playerFourkey.enabled = false;
+                playerFourkey1.enabled = false;
+                playerFourkey2.enabled = false;
+            }
+            if (valkyrie.numberOfKeys == 1)
+            {
+                playerFourkey.enabled = true;
+                playerFourkey1.enabled = false;
+                playerFourkey2.enabled = false;
+            }
+            if (valkyrie.numberOfKeys == 2)
+            {
+                playerFourkey.enabled = true;
+                playerFourkey1.enabled = true;
+                playerFourkey2.enabled = false;
+            }
+            if (valkyrie.numberOfKeys == 3)
+            {
+                playerFourkey.enabled = true;
+                playerFourkey1.enabled = true;
+                playerFourkey2.enabled = true;
+            }
+        }
+    }
 }
+
 
