@@ -5724,7 +5724,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Warrior
+  m_Text: JOIN HERE
 --- !u!222 &594047109
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9985,7 +9985,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Warrior
+  m_Text: JOIN HERE
 --- !u!222 &1091013047
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12837,7 +12837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1414495640
 Transform:
   m_ObjectHideFlags: 0
@@ -14314,7 +14314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Warrior
+  m_Text: JOIN HERE
 --- !u!222 &1563169379
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21149,7 +21149,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Warrior
+  m_Text: JOIN HERE
 --- !u!222 &2011679361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22135,6 +22135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f590f7b839a4ac4eac52c679bc2ec04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameCompletedScreen: {fileID: 1648702944}
 --- !u!1 &2113477929
 GameObject:
   m_ObjectHideFlags: 0
@@ -22492,6 +22493,10 @@ PrefabInstance:
     - target: {fileID: 3821378353526516568, guid: 7aad7d3c0d82adb4db773284f7f23bdb, type: 3}
       propertyPath: m_Name
       value: Character Select Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821378353526516568, guid: 7aad7d3c0d82adb4db773284f7f23bdb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3821378353526516572, guid: 7aad7d3c0d82adb4db773284f7f23bdb, type: 3}
       propertyPath: m_Pivot.x

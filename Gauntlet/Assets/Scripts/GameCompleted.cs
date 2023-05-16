@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class GameCompleted : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject gameCompletedScreen;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if(other.gameObject.tag == "Player")
+        {
+            gameCompletedScreen.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 }
