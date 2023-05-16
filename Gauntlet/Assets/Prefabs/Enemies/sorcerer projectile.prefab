@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1205512222257965716}
   - component: {fileID: 360063722356634099}
   - component: {fileID: 1677907070094829288}
+  - component: {fileID: -4491177287957006377}
   m_Layer: 0
   m_Name: sorcerer projectile
   m_TagString: Untagged
@@ -109,3 +110,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+--- !u!54 &-4491177287957006377
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3759725022160374381}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
