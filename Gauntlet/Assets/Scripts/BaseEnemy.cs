@@ -10,26 +10,30 @@ public class BaseEnemy : MonoBehaviour
     public GameObject[] _players;
 
     public GameObject chaseTarget;
+    private int randomPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        _players = GameObject.FindGameObjectsWithTag("Player");
+        randomPlayer = Random.Range(0, _players.Length);
     }
 
     // Update is called once per frame
     void Update()
     {
-        _players = GameObject.FindGameObjectsWithTag("Player");
-        CalculateClosestPlayer();
+        if(_players.Length > 1)
+        agent.destination = _players[randomPlayer].transform.position;
         
-        agent.destination = chaseTarget.transform.position;
+        else
+            agent.destination = _players[0].transform.position;
     }
 
     private void CalculateClosestPlayer()
     {
-        float playerOneDistance = Vector3.Distance(transform.position, _players[0].transform.position);
-        float playerTwoDistance = Vector3.Distance(transform.position, _players[1].transform.position);
+        float playerOneDistance = Vector3.Distance(_players[0].transform.position, transform.position);
+        float playerTwoDistance = Vector3.Distance(_players[1].transform.position, transform.position);
         float playerThreeDistance = Vector3.Distance(transform.position, _players[2].transform.position);
         float playerFourDistance = Vector3.Distance(transform.position, _players[3].transform.position);
 
