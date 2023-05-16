@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 2087354085}
   - component: {fileID: 2087354084}
   m_Layer: 6
-  m_Name: Bone Pile Level 1
+  m_Name: Bone Pile
   m_TagString: Bone Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1475699492217047726}
   - component: {fileID: 1347421213346965341}
   - component: {fileID: 2414769170245436000}
-  - component: {fileID: -1413364018957148500}
   - component: {fileID: 327749659146549484}
+  - component: {fileID: 8725226194168128150}
   m_Layer: 0
   m_Name: Valkyrie Projectile
   m_TagString: projectile
@@ -98,18 +98,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-1413364018957148500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7895347958898859195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff5bdb6a6cfdcc44dba4950ca87a0b86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &327749659146549484
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,3 +114,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &8725226194168128150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895347958898859195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487ada2227afa87499b4b12fe42e9473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valkyrieData: {fileID: 11400000, guid: 56df45a5a91fed24a8cee41a077f2bcd, type: 2}

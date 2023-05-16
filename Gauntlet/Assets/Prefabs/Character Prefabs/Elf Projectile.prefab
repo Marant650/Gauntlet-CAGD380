@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6570087329381429842}
   - component: {fileID: 3032120903957984670}
   - component: {fileID: 213034528299547240}
-  - component: {fileID: -4343671782827942985}
   - component: {fileID: 6692351856972398125}
+  - component: {fileID: 7756550899839204994}
   m_Layer: 0
   m_Name: Elf Projectile
   m_TagString: projectile
@@ -98,18 +98,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-4343671782827942985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103587804407569414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff5bdb6a6cfdcc44dba4950ca87a0b86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &6692351856972398125
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,3 +114,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &7756550899839204994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103587804407569414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa68ccc09721ba4f96318a91aa6c01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elfData: {fileID: 11400000, guid: 632e345ff7e4c5f4d8f71dbbc1c0dfc7, type: 2}

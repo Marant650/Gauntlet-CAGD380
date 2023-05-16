@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8314520532239185328}
   - component: {fileID: 6099407760600900185}
   - component: {fileID: 2669190090851343450}
-  - component: {fileID: -6724122188153793197}
   - component: {fileID: 6586133653428069569}
+  - component: {fileID: -7876413493047063552}
   m_Layer: 0
   m_Name: Warrior Projectile
   m_TagString: projectile
@@ -98,18 +98,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-6724122188153793197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860832832380424331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff5bdb6a6cfdcc44dba4950ca87a0b86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &6586133653428069569
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,3 +114,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &-7876413493047063552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860832832380424331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0afab0a94bfc8384aa67aa2044e81f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warriorData: {fileID: 11400000, guid: 4cb90a6a8444de747911ab810f280ee6, type: 2}
