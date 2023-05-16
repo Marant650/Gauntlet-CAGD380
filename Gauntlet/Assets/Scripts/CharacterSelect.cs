@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CharacterSelect : MonoBehaviour
 {
-    public NewPlayerManager newPlayerManager;
+    public NewPlayerManager NewPlayerManager;
 
     public Animator warriorAnimation;
     public Animator wizardAnimation;
@@ -72,28 +72,25 @@ public class CharacterSelect : MonoBehaviour
             if (playerOneClass == "warrior")
             {
                 Instantiate(warriorPrefab, Vector3.zero, Quaternion.identity);
-                //newPlayerManager.currentPlayersClasses.Add("warrior");
             }
             
             if (playerOneClass == "wizard")
             {
                 Instantiate(wizardPrefab, Vector3.zero, Quaternion.identity);
-                //newPlayerManager.currentPlayersClasses.Add("wizard");
             }
 
             if (playerOneClass == "elf")
             {
                 Instantiate(elfPrefab, Vector3.zero, Quaternion.identity);
-                //newPlayerManager.currentPlayersClasses.Add("elf");
             }
 
             if (playerOneClass == "valkyrie")
             {
                 Instantiate(valkyriePrefab, Vector3.zero, Quaternion.identity);
-                //newPlayerManager.currentPlayersClasses.Add("valkyrie");
             }
             level1.SetActive(true);
             this.gameObject.SetActive(false);
+            NewPlayerManager.currentPlayersClasses.Add(playerOneClass);
             playerInputManagerObj.SetActive(true);
         }
     }

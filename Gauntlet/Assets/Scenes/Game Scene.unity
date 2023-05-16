@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 128691641}
   - component: {fileID: 128691642}
   m_Layer: 0
-  m_Name: New Player Manager Container
+  m_Name: New Player Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7852,7 +7852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81ee1e5dbdaa5047b0582fc64239ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newPlayerManager: {fileID: 0}
+  NewPlayerManager: {fileID: 128691642}
   warriorAnimation: {fileID: 1260534435}
   wizardAnimation: {fileID: 1089503981}
   elfAnimation: {fileID: 1014612762}

@@ -12,30 +12,38 @@ public class NewPlayerManager : MonoBehaviour
     public GameObject valkyriePrefab;
     public GameObject newPlayerRandomClass;
 
+    private void Update()
+    {
+        PlayerInputManager.instance.playerPrefab = newPlayerRandomClass;
+    }
+
     public void PlayerJoined()
     {
-        PlayerInputManager.instance.playerPrefab = RandomClassPicker();
+        RandomClassPicker();
     }
 
     public bool IsClassInGame(string className)
     {
-        foreach (string x in currentPlayersClasses)
+        if (currentPlayersClasses.Contains(className))
         {
-            if (x.Equals(className))
-            {
-                Debug.Log(x + " already exists in game");
-                return true;
-            }
+            return true;
         }
-        return false;
+        else
+        {
+            return false;
+        }
     }
 
-    public GameObject RandomClassPicker()
+    public void RandomClassPicker()
     {
         float randomNumber = Random.Range(0.0f, 4.0f);
         if (randomNumber < 1.0f)
         {
-            if (!IsClassInGame("warrior"))
+            if (IsClassInGame("warrior"))
+            {
+                RandomClassPicker();
+            }
+            else
             {
                 newPlayerRandomClass = warriorPrefab;
                 currentPlayersClasses.Add("warrior");
@@ -44,7 +52,11 @@ public class NewPlayerManager : MonoBehaviour
 
         if (randomNumber >= 1.0f && randomNumber < 2.0f)
         {
-            if (!IsClassInGame("wizard"))
+            if (IsClassInGame("wizard"))
+            {
+                RandomClassPicker();
+            }
+            else
             {
                 newPlayerRandomClass = wizardPrefab;
                 currentPlayersClasses.Add("wizard");
@@ -53,7 +65,11 @@ public class NewPlayerManager : MonoBehaviour
 
         if (randomNumber >= 2.0f && randomNumber < 3.0f)
         {
-            if (!IsClassInGame("elf"))
+            if (IsClassInGame("elf"))
+            {
+                RandomClassPicker();
+            }
+            else
             {
                 newPlayerRandomClass = elfPrefab;
                 currentPlayersClasses.Add("elf");
@@ -62,13 +78,15 @@ public class NewPlayerManager : MonoBehaviour
 
         if (randomNumber >= 3.0f && randomNumber < 4.0f)
         {
-            if (!IsClassInGame("valkyrie"))
+            if (IsClassInGame("valkyrie"))
+            {
+                RandomClassPicker();
+            }
+            else
             {
                 newPlayerRandomClass = valkyriePrefab;
                 currentPlayersClasses.Add("valkyrie");
             }
         }
-
-        return newPlayerRandomClass;
     }
 }
